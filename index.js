@@ -227,10 +227,7 @@ const functionGetBalance = () => new Promise((resolve, reject) => {
             await page.click('#view_container > div > div > div.pwWryf.bxPAYd > div > div.zQJV3 > div > div.qhFLie > div > div > button') 
             await delay(2000)}catch{}
             await delay(5000)
-            await delay(2000)
-            await page.goto('https://m.youtube.com/channel/UCs_qMFR0-drgIV3rNW6dJRQ?reload=9&skip_registered_account_check=true&noapp=1',{waitUntil :'load'})
-            await page.waitForSelector(`#app > div.page-container > ytm-browse > ytm-c4-tabbed-header-renderer > div.c4-tabbed-header-channel.cbox > div > div > ytm-subscribe-button-renderer > div > c3-material-button > button > div > div`)
-            await page.click('#app > div.page-container > ytm-browse > ytm-c4-tabbed-header-renderer > div.c4-tabbed-header-channel.cbox > div > div > ytm-subscribe-button-renderer > div > c3-material-button > button > div > div')
+        
             console.log(`Sukses Register=> ${emailAkun} + '|' + ${passwordAkun}`)    
             await delay(2000)
             fs.appendFileSync("SuccessRegisterGoogle.txt", emailAkun + '|' + passwordAkun + '\n'.split(' ').join(''));
