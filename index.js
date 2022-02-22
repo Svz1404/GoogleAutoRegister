@@ -228,9 +228,9 @@ const functionGetBalance = () => new Promise((resolve, reject) => {
             await delay(2000)}catch{}
             await delay(5000)
         
-            console.log(`Sukses Register=> ${emailAkun} + '|' + ${passwordAkun}`)    
+            console.log(`Sukses Register=> ${emailAkun} + '|' + ${password}`)    
             await delay(2000)
-            fs.appendFileSync("SuccessRegisterGoogle.txt", emailAkun + '|' + passwordAkun + '\n'.split(' ').join(''));
+            fs.appendFileSync("SuccessRegisterGoogle.txt", emailAkun + '|' + password + '\n'.split(' ').join(''));
             console.log('==========================================================')
            
             
